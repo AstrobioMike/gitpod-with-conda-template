@@ -2,8 +2,6 @@ FROM continuumio/miniconda3
 
 RUN conda init bash
 
-RUN source ~/.bashrc
-
 # adding some more things I want
 RUN conda install -n base -c conda-forge mamba -y
 RUN mamba install -c conda-forge curl nano
