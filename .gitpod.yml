@@ -3,4 +3,3 @@ image:
 tasks:
   - name: initialize conda
     before: conda init bash ; source ~/.bashrc
-    
