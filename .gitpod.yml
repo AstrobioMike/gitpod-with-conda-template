@@ -5,3 +5,7 @@ tasks:
       bash ~/miniconda.sh -b -p ${HOME}/miniconda
       eval "$(${HOME}/miniconda/bin/conda shell.bash hook)"
       conda init
+  - name: install some conda stuff
+    before: |
+      conda install -n base -c conda-forge mamba -y
+      mamba create -n genelab-utils -c conda-forge -c bioconda -c defaults -c astrobiomike 'genelab-utils>=1.1.02' -y
