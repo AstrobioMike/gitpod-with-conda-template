@@ -1,11 +1,7 @@
 tasks:
-  - name: install miniconda
+  - name: install and setup miniconda
     before: |
       wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
       bash ~/miniconda.sh -b -p ${HOME}/miniconda
-      
-  - name: setup conda in shell
-    before: |
       eval "$(${HOME}/miniconda/bin/conda shell.bash hook)"
-      conda init bash
-      source ~/.bashrc
+      conda init
