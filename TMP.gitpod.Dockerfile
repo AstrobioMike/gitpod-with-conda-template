@@ -1,5 +1,7 @@
 FROM continuumio/miniconda3
 
+FROM gitpod/workspace-full
+
 RUN conda init bash
 
 # adding some more things I want
