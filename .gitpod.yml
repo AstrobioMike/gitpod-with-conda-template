@@ -2,4 +2,5 @@ image:
     file: .gitpod.Dockerfile
 tasks:
   - name: initialize conda
-    before: conda init bash
+    before: conda init bash ; source ~/.bashrc
+    
