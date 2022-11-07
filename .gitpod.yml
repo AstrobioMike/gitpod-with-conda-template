@@ -1,5 +1,8 @@
 image:
     file: .gitpod.Dockerfile
 tasks:
-  - name: initialize conda
+  - name: set permissions in conda area
+    before: sudo chmod -R o+w /opt/conda/
+
+  - name: initialize and source conda
     before: conda init bash ; source ~/.bashrc
