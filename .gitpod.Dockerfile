@@ -5,9 +5,6 @@ RUN sudo install-packages \
          curl \
          nano
 
-# making it so new conda stuff can be installed in gitpod
-sudo chmod -R o+w /opt/conda/
-
 # RUN conda init bash
 
 # RUN source ~/.bashrc
